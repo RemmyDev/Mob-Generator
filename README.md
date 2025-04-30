@@ -1,9 +1,9 @@
-#🧱 Minecraft Mob Generator via Node-RED
+🧱 Minecraft Mob Generator via Node-RED
 -
 
-This project integrates Minecraft, Node-RED, and MQTT to create a fully interactive web-based Mob Generator that changes an LED Strips color baased on the mob you spawned
-🚀 Features
+This project integrates Minecraft, Node-RED, and MQTT to create a fully interactive web-based Mob Generator that changes an LED Strips color based on the mob you spawned
 
+🚀 Features
 - Node-RED Web Dashboard: User-friendly Mob Generator interface with buttons for each Minecraft mob type.
  
 - Minecraft Integration: Custom Node-RED nodes send commands to your Minecraft server (e.g., spawn mobs, eliminate players, fetch stats).
