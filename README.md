@@ -14,11 +14,11 @@ This project integrates Minecraft, Node-RED, and MQTT to create a fully interact
 - Modular Flow: Built for expandability—easy to add new mobs, commands, or MQTT behaviors.
 
 🛠️ Architecture
--Node-RED Flow
+- Node-RED Flow
       V
--Mob Generator Dashboard (Web UI)
+- Mob Generator Dashboard (Web UI)
       V
--Minecraft Server & MQTT Server
+- Minecraft Server & MQTT Server
       V
--LED Strip (RGB read from the MQTT server)
+- LED Strip (RGB read from the MQTT server)
 
