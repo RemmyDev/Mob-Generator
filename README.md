@@ -2,6 +2,7 @@
 -
 
 This project integrates Minecraft, Node-RED, and MQTT to create a fully interactive web-based Mob Generator that changes an LED Strips color based on the mob you spawned
+-
 
 🚀 Features
 - Node-RED Web Dashboard: User-friendly Mob Generator interface with buttons for each Minecraft mob type.
@@ -11,3 +12,13 @@ This project integrates Minecraft, Node-RED, and MQTT to create a fully interact
 - LED Feedback via MQTT: Each mob sends a color-coded MQTT message to control an RGB LED strip.
  
 - Modular Flow: Built for expandability—easy to add new mobs, commands, or MQTT behaviors.
+
+🛠️ Architecture
+Node-RED Flow
+   ↓
+Mob Generator Dashboard (Web UI)
+   ↓
+Minecraft Server & MQTT Server
+   ↓
+LED Strip (RGB read from the MQTT server)
+
