@@ -15,10 +15,10 @@ This project integrates Minecraft, Node-RED, and MQTT to create a fully interact
 
 🛠️ Architecture
 Node-RED Flow
-   ↓
+      V
 Mob Generator Dashboard (Web UI)
-   ↓
+      V
 Minecraft Server & MQTT Server
-   ↓
+      V
 LED Strip (RGB read from the MQTT server)
 
