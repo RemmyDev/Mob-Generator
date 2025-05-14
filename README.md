@@ -71,3 +71,37 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 
 ---
 
+## 📝 How to Use
+
+### 1. Import the Node-RED Flow
+- Copy the provided JSON flow (we'll paste it later).
+- Open **Node-RED**.
+- Click on the **hamburger menu** (top right) → **Import** → **Clipboard**.
+- Paste the JSON flow into the clipboard and click **Import**.
+- The flow should now appear in your Node-RED workspace.
+
+### 2. Set Up the MQTT Server
+- In Node-RED, locate the MQTT nodes in the flow.
+- Double-click on each MQTT node and configure the server:
+  - Set the **MQTT Broker** to your own MQTT server (e.g., **IP address** or **hostname**).
+  - Enter the **MQTT topic** you are using to control the LED strip (you may need to configure this in your MQTT broker).
+
+### 3. Configure the Minecraft Server
+- Locate the **RCON** nodes in the flow (for Minecraft integration).
+- Double-click the RCON node and configure the Minecraft server:
+  - Set the **RCON Host** to your Minecraft server’s **IP address**.
+  - Set the **RCON Port** to your server’s RCON port (default is usually 25575).
+  - Enter your **RCON Password** for authentication.
+
+### 4. Access the Dashboard
+- After importing the flow and configuring the servers, deploy the flow in Node-RED.
+- Open a browser and navigate to your Node-RED dashboard (usually `http://<your-ip>:1880/ui`).
+- You should now see the **Mob Generator Dashboard** with buttons to spawn mobs, trigger actions, and see the LED strip feedback.
+
+---
+
+Once everything is set up, you can interact with the dashboard, spawn mobs, and watch as the LED strip changes color based on the mob you spawn!
+
+---
+
+This section will help guide the user step-by-step through the setup process, ensuring they can get the project running smoothly. Feel free to paste the JSON flow where the placeholder is!
