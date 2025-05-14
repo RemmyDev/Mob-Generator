@@ -84,7 +84,6 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
   <summary><strong>Click to view the JSON flow</strong></summary>
 
 ```json
-{
 [
     {
         "id": "93bc9b581a312155",
@@ -2256,7 +2255,9 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
         "hidden": false
     }
 ]
-}
+
+</details>
+---
 
 ### 2. Set Up the MQTT Server
 - In Node-RED, locate the MQTT nodes in the flow.
