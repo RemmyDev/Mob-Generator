@@ -1,60 +1,73 @@
-🧱 Minecraft Mob Generator via Node-RED
--
+# 🧱 Minecraft Mob Generator via Node-RED
+This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fully interactive web-based **Mob Generator** that changes an **LED Strip's** color based on the mob you spawned.
 
-This project integrates Minecraft, Node-RED, and MQTT to create a fully interactive web-based Mob Generator that changes an LED Strips color based on the mob you spawned
+---
 
+## 🚀 Features
 
-🚀 Features
-- Node-RED Web Dashboard: User-friendly Mob Generator interface with buttons for each Minecraft mob type.
- 
-- Minecraft Integration: Custom Node-RED nodes send commands to your Minecraft server (e.g., spawn mobs, eliminate players, fetch stats).
+- **Node-RED Web Dashboard**:  
+  User-friendly Mob Generator interface with buttons for each Minecraft mob type.
 
-- LED Feedback via MQTT: Each mob sends a color-coded MQTT message to control an RGB LED strip.
- 
-- Modular Flow: Built for expandability—easy to add new mobs, commands, or MQTT behaviors.
+- **Minecraft Integration**:  
+  Custom Node-RED nodes send commands to your Minecraft server (e.g., spawn mobs, eliminate players, fetch stats).
 
-🛠️ Architecture
-- Node-RED Flow  ↴    
-- Mob Generator Dashboard ↴
-- Minecraft Server & MQTT Server ↴
-- LED Strip (RGB read from the MQTT server)
+- **LED Feedback via MQTT**:  
+  Each mob sends a color-coded MQTT message to control an RGB LED strip.
 
+- **Modular Flow**:  
+  Built for expandability—easy to add new mobs, commands, or MQTT behaviors.
 
-👾 Mobs
-Hostile Mobs:
+---
 
--Blaze
+## 🛠️ Architecture
 
--Creeper
+- **Node-RED Flow**  
+  ↳ Logic and UI interaction
 
--Zombie
+- **Mob Generator Dashboard**  
+  ↳ Web interface for spawning mobs and triggering effects
 
--Skeleton
+- **Minecraft Server & MQTT Server**  
+  ↳ Commands and communication layer
 
--Wither Skeleton
+- **LED Strip (RGB read from the MQTT server)**  
+  ↳ Visual feedback based on mob type
 
--Spider
+---
 
--Witch
+## 👾 Mobs
 
--Enderman
+<details>
+  <summary><strong>Hostile Mobs</strong></summary>
+  
+  - Blaze  
+  - Creeper  
+  - Zombie  
+  - Skeleton  
+  - Wither Skeleton  
+  - Spider  
+  - Witch  
+  - Enderman
 
-Friendly Mobs:
+</details>
 
--Cow
+<details>
+  <summary><strong>Friendly Mobs</strong></summary>
+  
+  - Cow  
+  - Chicken  
+  - Pig  
+  - Sheep
+  
+</details>
 
--Chicken
+---
 
--Pig
+## 🎉 Extra Buttons
 
--Sheep
+- **Spawn Random Mob**  
+- **BOOM** (Spawns 1 TNT)  
+- **Teleport to Random Mob**
 
-🎉 Extra Buttons
-
--Spawn Random Mob
-
--BOOM (Spawns 1 TNT)
-
--Teleport to Random Mob
-
+---
 
