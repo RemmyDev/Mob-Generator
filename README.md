@@ -19,7 +19,6 @@ This project integrates Minecraft, Node-RED, and MQTT to create a fully interact
 - Minecraft Server & MQTT Server ↴
 - LED Strip (RGB read from the MQTT server)
 
--
 
 👾 Mobs
 Hostile Mobs:
