@@ -82,7 +82,6 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 
 ### 2. Set Up the MQTT Server
 - In Node-RED, locate the MQTT nodes in the flow.
-![MQTT Node]("C:\Users\tamer\Pictures\Screenshots\Screenshot 2025-05-14 142115.png")
 - Double-click on each MQTT node and configure the server:
   - Set the **MQTT Broker** to your own MQTT server (e.g., **IP address** or **hostname**).
   - Enter the **MQTT topic** you are using to control the LED strip (you may need to configure this in your MQTT broker).
