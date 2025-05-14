@@ -74,7 +74,7 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 ## 📝 How to Use
 
 ### 1. Import the Node-RED Flow
-- Copy the provided JSON flow (we'll paste it later).
+- Copy the provided JSON flow: ____.
 - Open **Node-RED**.
 - Click on the **hamburger menu** (top right) → **Import** → **Clipboard**.
 - Paste the JSON flow into the clipboard and click **Import**.
