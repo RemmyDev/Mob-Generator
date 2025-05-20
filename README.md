@@ -15,7 +15,7 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
   Each mob sends a color-coded MQTT message to control an RGB LED strip.
 
 - **Modular Flow**:  
-  Built for expandability—easy to add new mobs, commands, or MQTT behaviors.
+  Easy to add new mobs, commands, or MQTT behaviors.
 
 ---
 
