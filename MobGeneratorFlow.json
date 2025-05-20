@@ -1703,9 +1703,7 @@
         "x": 810,
         "y": 1660,
         "wires": [
-            [
-                "7f964870993fca44"
-            ]
+            []
         ]
     },
     {
@@ -1884,7 +1882,7 @@
         "type": "function",
         "z": "93bc9b581a312155",
         "name": "function 23",
-        "func": "function hexToRgb(hexColor) {\n    const hex = hexColor.replace(/^#/, '');\n    const r = parseInt(hex.substring(0, 2), 16);\n    const g = parseInt(hex.substring(2, 4), 16);\n    const b = parseInt(hex.substring(4, 6), 16);\n\n    return { r, g, b, a: 1 };\n}\n\nconst red = hexToRgb('#FF0000');  // red\n\nconst leds = Array(16).fill(red);  // all LEDs will be red\n\nmsg.payload = leds;\nreturn msg;\n",
+        "func": "function hexToRgb(hexColor) {\n    const hex = hexColor.replace(/^#/, '');\n    const r = parseInt(hex.substring(0, 2), 16);\n    const g = parseInt(hex.substring(2, 4), 16);\n    const b = parseInt(hex.substring(4, 6), 16);\n\n    return { r, g, b, a: 1 };\n}\n\nconst purple = hexToRgb('#800080');  // purple\n\nconst leds = Array(16).fill(purple);  // all LEDs will be purple\n\nmsg.payload = leds;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1915,22 +1913,6 @@
         "broker": "5058bca32a4f00c3",
         "x": 810,
         "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "7f964870993fca44",
-        "type": "debug",
-        "z": "93bc9b581a312155",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 1660,
         "wires": []
     },
     {
@@ -1969,46 +1951,6 @@
         "x": 100,
         "y": 1380,
         "wires": []
-    },
-    {
-        "id": "92f9367530c1ce67",
-        "type": "change",
-        "z": "93bc9b581a312155",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "/tp remked franky",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 240,
-        "y": 2160,
-        "wires": [
-            [
-                "5f46d0dfd10f95d1"
-            ]
-        ]
-    },
-    {
-        "id": "5f46d0dfd10f95d1",
-        "type": "rcon",
-        "z": "93bc9b581a312155",
-        "name": "",
-        "server": "974b018728e661cc",
-        "command": "",
-        "x": 450,
-        "y": 2140,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "ab8d52c8070607ed",
