@@ -97,10 +97,8 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 
 ### 4. Access the Dashboard
 - After importing the flow and configuring the servers, deploy the flow in Node-RED.
-- Open a browser and navigate to your Node-RED dashboard (usually `http://<your-ip>:1880/ui`).
-- You should now see the **Mob Generator Dashboard** with buttons to spawn mobs, trigger actions, and see the LED strip feedback.
-
----
-
-Once everything is set up, you can interact with the dashboard, spawn mobs, and watch as the LED strip changes color based on the mob you spawn!
+- Open a browser and navigate to your Node-RED dashboard (usually `http://<your-ip>:1880/ui`), or click on the top right button with the square and arrow.
+-  ![dashboard button](https://private-user-images.githubusercontent.com/125493371/443661002-4df8b141-266f-4727-b1f4-0e008e423299.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDc3MjE5NDksIm5iZiI6MTc0NzcyMTY0OSwicGF0aCI6Ii8xMjU0OTMzNzEvNDQzNjYxMDAyLTRkZjhiMTQxLTI2NmYtNDcyNy1iMWY0LTBlMDA4ZTQyMzI5OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyMFQwNjE0MDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iY2EwOWEwOWZiZTNjMGQzOTlmNjZlZmYwODUwNGFjNzg4ZGVjZTI0NjJhMTYwZTY0ZDcwYjJlY2JjNzY3ZmQ5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.bhyzJ2bvFzevxbZ4L3tduuOWJKDDu5aWHnXNUUOkiNI)
+- You should now see the **Mob Generator Dashboard** with buttons to spawn mobs, trigger actions, and see the LED strip feedback, as well as the mobs/commands working in minecraft!
+- That's it, expand, change and do whatever you want with it.
 
