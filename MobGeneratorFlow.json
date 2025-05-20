@@ -1,0 +1,42 @@
+[
+    {
+        "id": "414830095fe057db",
+        "type": "ui_text",
+        "z": "93bc9b581a312155",
+        "group": "ab8d52c8070607ed",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Extras",
+        "format": "",
+        "layout": "col-center",
+        "className": "text",
+        "style": true,
+        "font": "Trebuchet MS,Helvetica,sans-serif",
+        "fontSize": "30",
+        "color": "#000000",
+        "x": 630,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "ab8d52c8070607ed",
+        "type": "ui_group",
+        "name": "",
+        "tab": "6c444e83aa18f545",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6c444e83aa18f545",
+        "type": "ui_tab",
+        "name": "McMobProject",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
