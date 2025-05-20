@@ -89,6 +89,7 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 
 ### 3. Configure the Minecraft Server
 - Locate the **RCON** nodes in the flow (for Minecraft integration).
+-  ![rcon node](https://private-user-images.githubusercontent.com/125493371/443660969-6728e20f-4e68-4769-b632-7fbe12bd3981.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDc3MjE5NDksIm5iZiI6MTc0NzcyMTY0OSwicGF0aCI6Ii8xMjU0OTMzNzEvNDQzNjYwOTY5LTY3MjhlMjBmLTRlNjgtNDc2OS1iNjMyLTdmYmUxMmJkMzk4MS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyMFQwNjE0MDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hMDJjYWFlMmI5YmM5MjA2MzVjOGIzNzA2Y2I4OGI2NmQ0NDU1YjA1MmU5NDIxY2QzYTRhMGQzODgyZGJmYWRlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.0MO__2XTL9Qps7OS6OwezmFFd3sLBwFX9FiHjWVrrAI)
 - Double-click the RCON node and configure the Minecraft server:
   - Set the **RCON Host** to your Minecraft server’s **IP address**.
   - Set the **RCON Port** to your server’s RCON port (default is usually 25575).
