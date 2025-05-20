@@ -74,7 +74,7 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 ## 📝 How to Use
 
 ### 1. Import the Node-RED Flow
-- Download the JSON flow "Mob_Generator".
+- Download the JSON file "MobGeneratorFlow".
 - Open **Node-RED**.
 - Click on the **hamburger menu** (top right) → **Import** → **Clipboard**.
 - Paste the JSON flow into the clipboard and click **Import**.
