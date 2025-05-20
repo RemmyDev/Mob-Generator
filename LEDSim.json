@@ -1,0 +1,916 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a6b6281c0a9686a9",
+        "type": "serverinfo",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "server": "ed1d50965e407c70",
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "aaf8865770cd95d6"
+            ]
+        ]
+    },
+    {
+        "id": "134146adbc6c0a7f",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "a6b6281c0a9686a9"
+            ]
+        ]
+    },
+    {
+        "id": "3f72e399368a18e7",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e5773d817f84fa07",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "led",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4cb9b9a91f678948",
+        "x": 670,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f39ff981394b499e",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"r\":5,\"g\":255,\"b\":200},{\"r\":5,\"g\":0,\"b\":200},{\"r\":5,\"g\":255,\"b\":0},{\"r\":50,\"g\":100,\"b\":50}]",
+        "payloadType": "json",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "e5773d817f84fa07"
+            ]
+        ]
+    },
+    {
+        "id": "aaf8865770cd95d6",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "let playerCount = msg.payload.online;\nlet lights = Array();\nlet led = {\"r\":5,\"g\":255,\"b\":200};\nfor (let index = 0; index < playerCount; index++) {\n    lights.push(led); \n}\nmsg.payload = lights;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "3f72e399368a18e7",
+                "e5773d817f84fa07"
+            ]
+        ]
+    },
+    {
+        "id": "febcfdd870f73860",
+        "type": "playermanage",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "server": "ed1d50965e407c70",
+        "action": "kick",
+        "gamemode": "survival",
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "3f72e399368a18e7"
+            ]
+        ]
+    },
+    {
+        "id": "c5d5b4d14e4c09b6",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "target",
+                "v": "tomd",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "give",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "diamond 1",
+        "payloadType": "str",
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "febcfdd870f73860"
+            ]
+        ]
+    },
+    {
+        "id": "99d543c60e2091c5",
+        "type": "rcon",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "server": "ed1d50965e407c70",
+        "command": "/summon cow ~ ~ ~ {CustomName:\"\\\"Bessie\\\"\"}",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "3f72e399368a18e7"
+            ]
+        ]
+    },
+    {
+        "id": "ee45950d1f4278d8",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "99d543c60e2091c5"
+            ]
+        ]
+    },
+    {
+        "id": "0c7404c92f0a5f97",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e59f49e4cac1bb93",
+        "type": "mqtt in",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "topic": "led",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5058bca32a4f00c3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 50,
+        "y": 160,
+        "wires": [
+            [
+                "230e97c903ced5ac"
+            ]
+        ]
+    },
+    {
+        "id": "f53658a2e60e5d5e",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led0",
+        "group": "383dfdb1a6d53717",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 430,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd950a4360088a4f",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led1",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led1",
+        "topicType": "str",
+        "className": "",
+        "x": 550,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71ca50795852f46a",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led3",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led3",
+        "topicType": "str",
+        "className": "",
+        "x": 550,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c60a4f26e2fd63a9",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led2",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led2",
+        "topicType": "str",
+        "className": "",
+        "x": 430,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "230e97c903ced5ac",
+        "type": "function",
+        "z": "0c7404c92f0a5f97",
+        "name": "split array",
+        "func": "let colors = msg.payload;  // array of color objects\nlet outputs = new Array(16).fill(null);  // Initialize 16 outputs\n\nfor (let i = 0; i < 16; i++) {\n    let color = colors[i] || { r: 0, g: 0, b: 0 };  // black if undefined\n\n    let hex = \"#\" + ((1 << 24) + (color.r << 16) + (color.g << 8) + color.b)\n        .toString(16)\n        .slice(1)\n        .toUpperCase();\n\n    outputs[i] = {\n        payload: hex,\n        topic: \"led\" + (i + 1)\n    };\n}\n\nreturn outputs;\n",
+        "outputs": 16,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 160,
+        "wires": [
+            [
+                "f53658a2e60e5d5e"
+            ],
+            [
+                "dd950a4360088a4f"
+            ],
+            [
+                "c60a4f26e2fd63a9"
+            ],
+            [
+                "71ca50795852f46a"
+            ],
+            [
+                "d3fdd60519c2e080"
+            ],
+            [
+                "0ccb8e06faa24420"
+            ],
+            [
+                "07cf65b091877f8f"
+            ],
+            [
+                "e6f794ecad2b33d4"
+            ],
+            [
+                "8c3d6fc8daf46117"
+            ],
+            [
+                "6d0a47c2586f40a9"
+            ],
+            [
+                "e3b725b28e6253ea"
+            ],
+            [
+                "6b5a06c3065a1024"
+            ],
+            [
+                "9ba2f956127b38e1"
+            ],
+            [
+                "6d774383ba952241"
+            ],
+            [
+                "4468079f9c3582d1"
+            ],
+            [
+                "80af230ee2edde06"
+            ]
+        ]
+    },
+    {
+        "id": "d3fdd60519c2e080",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led4",
+        "group": "383dfdb1a6d53717",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 430,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07cf65b091877f8f",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led6",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led2",
+        "topicType": "str",
+        "className": "",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ccb8e06faa24420",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led5",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led1",
+        "topicType": "str",
+        "className": "",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6f794ecad2b33d4",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led7",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led3",
+        "topicType": "str",
+        "className": "",
+        "x": 550,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c3d6fc8daf46117",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led8",
+        "group": "383dfdb1a6d53717",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 430,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3b725b28e6253ea",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led10",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led2",
+        "topicType": "str",
+        "className": "",
+        "x": 430,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d0a47c2586f40a9",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led9",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led1",
+        "topicType": "str",
+        "className": "",
+        "x": 550,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b5a06c3065a1024",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led11",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led3",
+        "topicType": "str",
+        "className": "",
+        "x": 550,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ba2f956127b38e1",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led12",
+        "group": "383dfdb1a6d53717",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 430,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4468079f9c3582d1",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led14",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led2",
+        "topicType": "str",
+        "className": "",
+        "x": 430,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d774383ba952241",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led13",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led1",
+        "topicType": "str",
+        "className": "",
+        "x": 550,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80af230ee2edde06",
+        "type": "ui_colour_picker",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "label": "led15",
+        "group": "383dfdb1a6d53717",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "led3",
+        "topicType": "str",
+        "className": "",
+        "x": 550,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "272c5e5b30b54d3d",
+        "type": "http in",
+        "z": "0c7404c92f0a5f97",
+        "name": "",
+        "url": "/minecraft/button/1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "b116f6fc66e0806f"
+            ]
+        ]
+    },
+    {
+        "id": "b116f6fc66e0806f",
+        "type": "debug",
+        "z": "0c7404c92f0a5f97",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ed1d50965e407c70",
+        "type": "serverconfig",
+        "host": "tome.lu",
+        "rconPort": "25575",
+        "rconPassword": "teinf"
+    },
+    {
+        "id": "4cb9b9a91f678948",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "tome.lu",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5058bca32a4f00c3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "tome.lu",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "383dfdb1a6d53717",
+        "type": "ui_group",
+        "name": "led-strip",
+        "tab": "1dea39d4c951f9a4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1dea39d4c951f9a4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
