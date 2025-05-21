@@ -21,7 +21,8 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 
 ## 🛠️ Architecture
 
-- ![architecture](https://github.com/RemmyDev/Mob-Generator/blob/main/Images/Screenshot%202025-05-21%20131837.png)
+- ![architecture](https://github.com/RemmyDev/Mob-Generator/blob/main/Images/Screenshot%202025-05-21%20133343.png)
+
 ---
 
 ## 👾 Mobs
