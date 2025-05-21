@@ -64,7 +64,7 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 ## 📝 How to Use
 
 ### 1. Import the Node-RED Flow
-- Download the JSON file "MobGeneratorFlow".
+- Download the JSON file "[Mob-Generator](https://github.com/RemmyDev/Mob-Generator/blob/main/MobGeneratorFlow.json)".
 - Open **Node-RED**.
 - Click on the **hamburger menu** (top right) → **Import** → **Clipboard**.
 - Paste the JSON flow into the clipboard and click **Import**.
@@ -95,12 +95,11 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 
 ---
 
-### 5. Optional
-🧪 Optional: LED Simulation
+### 🧪 Optional LED Simulation
 
 Want to test the LED logic without physical LEDs?
 
-- Import the LEDSim flow the same way as above.
+- Import the [LEDSim](https://github.com/RemmyDev/Mob-Generator/blob/main/LEDSim.json) flow the same way as above.
 
 - Ensure it uses the same MQTT broker.
 
