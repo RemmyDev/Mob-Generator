@@ -93,6 +93,8 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 - That's it, expand, change and do whatever you want with it.
 - ![mob gen](https://github.com/RemmyDev/Mob-Generator/blob/main/Images/Screenshot%202025-05-20%20084637.png?raw=true)
 
+---
+
 ### 5. Optional
 🧪 Optional: LED Simulation
 
