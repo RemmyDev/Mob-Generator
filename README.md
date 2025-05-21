@@ -107,6 +107,8 @@ Want to test the LED logic without physical LEDs?
 - ![led sim](https://github.com/RemmyDev/Mob-Generator/blob/main/Images/Screenshot%202025-05-20%20084619.png?raw=true)
 
   
+---
+  
 ### 🔧 Customize & Expand
 
 - Add new mobs: duplicate a button node, change the mob name/command.
@@ -125,6 +127,5 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ### Acknowledgements
 - [minecraft_manager](https://github.com/schto173/minecraft_manager) used for all the minecraft-related nodes.
-
-
-
+  
+---
