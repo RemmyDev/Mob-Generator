@@ -114,8 +114,17 @@ Want to test the LED logic without physical LEDs?
 - Adjust LED colors: change the JS functions.
 
 - Add new features using more Node-RED nodes.
+  
+---
 
-- Link to the Minecraft Nodes used in this project (contains README):
-https://github.com/schto173/minecraft_manager
+### License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+### Acknowledgements
+- [minecraft_manager](https://github.com/schto173/minecraft_manager) used for all the minecraft-related nodes.
+
 
 
