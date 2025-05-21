@@ -119,7 +119,7 @@ Want to test the LED logic without physical LEDs?
 
 ### License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/RemmyDev/Mob-Generator/blob/main/LICENSE) file for details.
 
 ---
 
