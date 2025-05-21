@@ -21,17 +21,15 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 
 ## 🛠️ Architecture
 
-- **Node-RED Flow**  
-  ↳ Logic and UI interaction
-
-- **Mob Generator Dashboard**  
-  ↳ Web interface for spawning mobs and triggering effects
-
-- **Minecraft Server & MQTT Server**  
-  ↳ Commands and communication layer
-
-- **LED Strip (RGB read from the MQTT server)**  
-  ↳ Visual feedback based on mob type
+┌─────────────┐       ┌──────────────┐       ┌───────────────┐
+│ Node-RED UI │──────▶│  MQTT Broker │──────▶│  LED Strip    │
+└────┬────────┘       └─────┬────────┘       └───────────────┘
+     │                      │
+     ▼                      ▼
+┌─────────────┐       ┌──────────────┐
+│ Minecraft   │◀──────│ RCON Nodes   │
+│ Server      │       └──────────────┘
+└─────────────┘
 
 ---
 
