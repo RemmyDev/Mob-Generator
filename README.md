@@ -94,6 +94,28 @@ This project integrates **Minecraft**, **Node-RED**, and **MQTT** to create a fu
 - ![mob gen](https://github.com/RemmyDev/Mob-Generator/blob/main/Images/Screenshot%202025-05-20%20084637.png?raw=true)
 
 ### 5. Optional
-- To test if LEDS work with a specific MQTT server, you can use the "LEDSim" flow and just import it into Node-Red the same way you imported the other file, just make sure to use the same mqtt server in both flows.
-- It should look like this at the end, and the leds should change color depending on what button you clicked:
+🧪 Optional: LED Simulation
+
+Want to test the LED logic without physical LEDs?
+
+- Import the LEDSim flow the same way as above.
+
+- Ensure it uses the same MQTT broker.
+
+- You'll see simulated LED color changes based on the mob buttons:
+
 - ![led sim](https://github.com/RemmyDev/Mob-Generator/blob/main/Images/Screenshot%202025-05-20%20084619.png?raw=true)
+
+  
+### 🔧 Customize & Expand
+
+- Add new mobs: duplicate a button node, change the mob name/command.
+
+- Adjust LED colors: change the JS functions.
+
+- Add new features using more Node-RED nodes.
+
+- Link to the Minecraft Nodes used in this project (contains README):
+https://github.com/schto173/minecraft_manager
+
+
